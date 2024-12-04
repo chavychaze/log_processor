@@ -1,0 +1,28 @@
+version: "3.8"
+
+services:
+  log-processor:
+    build: .
+    volumes:
+      - ./logs:/logs
+      - ./output:/output
+    environment:
+      - PG_HOST=postgres
+      - PG_PORT=5432
+      - PG_DB=logdb
+      - PG_USER=loguser
+      - PG_PASSWORD=logpassword
+
+  postgres:
+    image: postgres:13
+    environment:
+      POSTGRES_DB: logdb
+      POSTGRES_USER: loguser
+      POSTGRES_PASSWORD: logpassword
+    volumes:
+      - pg-data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+volumes:
+  pg-data:
