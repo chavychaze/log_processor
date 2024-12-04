@@ -154,6 +154,10 @@ python -m pytest tests/
 
 # Format code
 black src/
+
+# Install dev-dependencies
+pip install -r requirements-dev.txt
+pre-commit install
 ```
 
 ### Custom Modifications
