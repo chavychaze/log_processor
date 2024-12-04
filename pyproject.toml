@@ -1,0 +1,34 @@
+[tool.black]
+line-length = 88
+skip-string-normalization = false
+target-version = ['py39']
+include = '\.pyi?$'
+force-exclude = '''
+/(
+    \.git
+  | \.venv
+  | venv
+  | build
+  | dist
+)/
+'''
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+
+[tool.pylint]
+max-line-length = 88
+disable = ["C0111", "C0103"]
+
+[tool.pylint.messages_control]
+disable = [
+    "R0911",
+    "W0621",
+    "W0404",
+    "C0415",
+    "W0718"
+]
+
+[tool.pylint.format]
+max-line-length = 88
