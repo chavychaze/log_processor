@@ -7,6 +7,7 @@ services:
       - ./logs:/logs
       - ./output:/output
     environment:
+      - PYTHONPATH=/app
       - PG_HOST=postgres
       - PG_PORT=5432
       - PG_DB=logdb

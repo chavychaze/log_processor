@@ -156,6 +156,7 @@ python -m pytest tests/
 black src/
 
 # Install dev-dependencies
+export PYTHONPATH="./"
 pip install -r requirements-dev.txt
 pre-commit install
 ```
