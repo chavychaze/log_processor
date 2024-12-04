@@ -1,9 +1,6 @@
-"""
-Log Processing Package
-"""
-
-from src.log_reader import LogFileReader
+"""Log Processing Package"""
 from src.db_writer import DatabaseWriter
+from src.log_reader import LogFileReader
 
 __version__ = "1.0.1"
 __author__ = "Vitaliy Sobol"
